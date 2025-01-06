@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    background-color: aquamarine;
+}
+
+.container {
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    box-shadow: 0px 10px 36px 16px rgba(0, 0, 0, 0.1);
+    padding-bottom: 25px;
+}
+
+#playerText {
+    padding: 10px;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 50px); /* Ensure each column is 50px wide */
+    width: fit-content; /* Ensure the grid fits its content */
+    margin: 20px auto; /* Center horizontally, with 20px vertical margin */
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 36px; /* Increase font size */
+    text-align: center; /* Center text horizontally */
+    line-height: 50px; /* Center text vertically */
+    font-weight: bold; /* Make text bold for better visibility */
+}
+
+.box:nth-child(-n+3) { /* Top row */
+    border-top: none;
+}
+
+.box:nth-child(3n+1) { /* First column */
+    border-left: none;
+}
+
+.box:nth-child(3n) { /* Last column */
+    border-right: none;
+}
+
+.box:nth-child(n+7) { /* Bottom row */
+    border-bottom: none;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color:grey;
+    font-family: sans-serif;
+    font-weight: 600;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
